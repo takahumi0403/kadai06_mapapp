@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>課題05地図アプリ</title>
+ 
+  
+</head>
+
+<body>
+  <h1>遊びに行った場所の記録</h1>
+  <main>
+    <div class="input-area">
+      <input type="datetime-local" name="訪問時間" id="time">
+      <input id ='title' type="text" placeholder="訪問目的を入力">
+      <textarea id ='text' placeholder="詳細を入力"></textarea>
+      <!-- map area -->
+       <div class="map-area">
+        <div id ="myMap" style="position:relative;float:left;width:70%;height:100%;"></div>
+          <div id="view_area" style="position:relative;float:right;width:30%;height:100%;overflow:auto;">
+            <h3>場所の記録</h3>
+            <p id="loclng"><p id="address"></p></p>
+          </div>
+        </div>
+      
+
+      <div class="btn-area">
+        <button id ='save'>セーブ</button>
+        <button id ='clear'>削除</button>
+      </div>
+    </div>
+  
+    
+
+    <ul id ='list'>
+      <!-- ここに追加データが挿入される -->
+    </ul>
+
+    <footer>
+      課題05地図アプリ
+    </footer>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=' async defer></script>
+  <script src="js/BmapQuery.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+ 
+
+</body>
+
+</html>
